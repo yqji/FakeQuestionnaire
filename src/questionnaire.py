@@ -57,7 +57,6 @@ class Questionnaire:
         start_time = re.search(r'\d+?/\d+?/\d+?\s\d+?:\d{2}', response.text)
         return start_time.group()
 
-
     def set_post_url(self):
         self.set_header()
         response = self.get_response()
@@ -87,7 +86,6 @@ class Questionnaire:
         self.set_post_url()
         result = self.post_data(data)
         print(result.content)
-
 
     def mul_run(self, n):
         for i in range(n):
